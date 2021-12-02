@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.link_container {
+  margin-top: 0.7rem;
+  font-size: 2rem;
+}
+
+.link_container a {
+  margin: 1rem;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in;
+}
+
+.link_container a:hover {
+  color: white;
+  background-color: black;
+}

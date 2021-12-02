@@ -110,6 +110,44 @@
   margin-left: 0.5rem;
 }
 
+.cat_container{
+  margin:3rem 0.5rem 2rem;
+  width:65vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cat_container button{
+  margin: 0 0.5rem 2rem;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 25px;
+  color:#ffffff;
+}
+
+.business{
+  background-color: #00a7f5;
+}
+.entertainment{
+  background-color: #fec700;
+}
+.general{
+  background-color: #4e4e52;
+}
+.health{
+  background-color: #62db3d;
+}
+.science{
+  background-color: #8b30c7;
+}
+.sports{
+  background-color: #db2754;
+}
+.technology{
+  background-color: #197449;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

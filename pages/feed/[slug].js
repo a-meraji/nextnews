@@ -1,10 +1,12 @@
 import { useRouter } from "next/dist/client/router";
 import styles from "../../styles/Feed.module.css";
-
+import React, { useContext } from "react";
+import { Context } from "../../context";
 const Feed = ({ pageNumber, articles }) => {
   const router = useRouter();
+  const { category } = useContext(Context);
   return (
-      <>
+    <>
       <div className={styles.main}>
         {articles.map((article, index) => (
           <div key={index} className={styles.post}>
@@ -20,7 +22,9 @@ const Feed = ({ pageNumber, articles }) => {
         <div
           onClick={() => {
             if (pageNumber > 1) {
-              router.push(`/feed/${pageNumber - 1}`).then(()=>window.scrollTo(0,0));
+              router
+                .push(`/feed/${pageNumber - 1}`)
+                .then(() => window.scrollTo(0, 0));
             }
           }}
           className={pageNumber === 1 ? styles.disabled : styles.active}
@@ -31,7 +35,9 @@ const Feed = ({ pageNumber, articles }) => {
         <div
           onClick={() => {
             if (pageNumber < 5) {
-              router.push(`/feed/${pageNumber + 1}`).then(()=>window.scrollTo(0,0));
+              router
+                .push(`/feed/${pageNumber + 1}`)
+                .then(() => window.scrollTo(0, 0));
             }
           }}
           className={pageNumber === 5 ? styles.disabled : styles.active}
@@ -39,7 +45,7 @@ const Feed = ({ pageNumber, articles }) => {
           Next Page
         </div>
       </div>
-      </>
+    </>
   );
 };
 
