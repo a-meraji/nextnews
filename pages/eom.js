@@ -1,10 +1,7 @@
 import styles from "../styles/EOM.module.css";
-import { Toolbar } from "../components/toolbar";
 
 const EOM = ({ employee }) => {
   return (
-    <div className="page-container">
-      <Toolbar />
       <div className={styles.main}>
         <div>
           <h1>employee of the month</h1>
@@ -16,7 +13,6 @@ const EOM = ({ employee }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
