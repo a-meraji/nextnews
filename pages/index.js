@@ -1,10 +1,8 @@
 import styles from "../styles/Home.module.css";
-import React, { useContext } from "react";
-import { Context } from "../context";
-
+import { useRouter } from "next/dist/client/router";
 export default function Home() {
-  const { setCategory } = useContext(Context);
-  const categories = [
+  const router = useRouter();
+ const categories = [
     "business",
     "entertainment",
     "general",
@@ -13,6 +11,7 @@ export default function Home() {
     "sports",
     "technology",
   ];
+
   return (
     <div className={styles.main}>
       <h1> Next.js News App</h1>
@@ -25,9 +24,7 @@ export default function Home() {
             <button
               key={index}
               className={styles[cat]}
-              onClick={() => {
-                setCategory(cat);
-              }}
+              onClick={()=>router.push(`/feed/1?cat=${cat}`)}           
             >
               {cat}
             </button>
