@@ -9,8 +9,8 @@ export default function About() {
         programmed by Amin Meraji
       </p>
       <div className={styles.link_container}>
-      <a href='https://twitter.com/mamad_coder' target='_blank'><AiFillTwitterCircle/></a>
-      <a href='https://github.com/a-meraji' target='_blank'><AiFillGithub/></a>
+      <a href='https://twitter.com/mamad_coder' ><AiFillTwitterCircle/></a>
+      <a href='https://github.com/a-meraji'><AiFillGithub/></a>
       </div>
     </div>
   );
